@@ -1,0 +1,13 @@
+---
+- hosts: all
+  
+  become: true
+  
+  tasks:
+    - name: Get disk information
+      ansible.builtin.shell: lsblk
+      register: disk_info
+
+    - name: Print disk information
+      debug:
+        var: disk_info.stdout_lines
