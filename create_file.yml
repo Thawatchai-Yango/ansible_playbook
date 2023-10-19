@@ -1,8 +1,6 @@
 ---
 - name: Create an empty text file
-  hosts: server1
-  gather_facts: yes
-  become: yes
+  hosts: all
   become_user: fcpo
 
   tasks:
