@@ -4,7 +4,7 @@
   become: true
   
   tasks:
-    - name: Get disk information
+    - name: Get disk information Test push
       ansible.builtin.shell: lsblk
       register: disk_info
 
